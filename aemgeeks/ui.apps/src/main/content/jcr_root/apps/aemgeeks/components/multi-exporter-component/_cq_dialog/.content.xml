@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+	xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+	xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+	xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Multi Exporter Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+	<content
+        granite:class="cmp-author_editor"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+		<items jcr:primaryType="nt:unstructured">
+			<column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+				<items jcr:primaryType="nt:unstructured">
+					<multiExporterTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Multi Exporter Title"
+                        name="./multiExporterTitle"/>
+					<multiExporterDescription
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Multi Exporter Description"
+                        name="./multiExporterDescription"/>
+					<multiExporterPublishedDate
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+						emptyText="Publish Date"
+                        fieldLabel="Publish Date"
+                        fieldDescription="Please select a date."
+                        name="./multiExporterPublishedDate"/>
+					<well
+						jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/coral/foundation/well"
+						fieldLabel="Multi Exporter Book Details">
+						<items jcr:primaryType="nt:unstructured">
+							<multiExporterBooks
+									granite:class="foundation-toggleable cmp-teaser__editor-multifield_actions"
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+									composite="{Boolean}false"
+									fieldLabel="Author's Multi Exporter Books">
+								<field
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+									name="./multiExporterBooks"/>
+							</multiExporterBooks>
+						</items>
+					</well>
+				</items>
+			</column>
+		</items>
+	</content>
+</jcr:root>

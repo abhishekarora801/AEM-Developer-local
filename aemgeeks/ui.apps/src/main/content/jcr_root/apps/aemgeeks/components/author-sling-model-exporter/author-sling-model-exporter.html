@@ -1,0 +1,20 @@
+<div data-sly-use.books="${'com.aem.geeks.core.models.AuthorSlingModelExporter' @ rAttribute = 'TestAttribute'}">
+    <div>First Name : ${books.firstName} </div>
+    <div>Last Name : ${books.lastName} </div>
+    <div>Is Professor : ${books.isProfessor} </div>
+
+    ==========Multifield with single field==========
+    <div data-sly-list.item="${books.authorBooks}">
+        --------Book : ${itemList.count}--------
+        <p> Book: <b>${item} </b></p>
+    </div>
+    <p>ALL Book : <b>${books.authorBooks @ join=', '}</b></p>
+
+    ==========Using MAP==========
+    <div data-sly-list.item="${books.bookDetailsWithMap}">
+        ------Book : ${itemList.count}------
+        <p> Book : <b>${item.bookname}</b></p>
+        <p> Book : <b>${item.booksubject}</b></p>
+        <p> Book : <b>${item.publishyear}</b></p>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div data-sly-use.books="com.aem.geeks.core.models.XmlExporterComponent">
+    <div>Title : ${books.xmlTitle} </div>
+    <div>Description : ${books.xmlDescription} </div>
+    <div>Date : ${'MMM dd,yyyy' @ format=books.xmlPublishedDate} </div>
+
+    ==========Multifield with single field==========
+    <div data-sly-list.item="${books.xmlAuthorBooks}">
+        --------Book : ${itemList.count}--------
+        <p> Book: <b>${item} </b></p>
+    </div>
+    <p>ALL Book : <b>${books.xmlAuthorBooks @ join=', '}</b></p>
+</div>

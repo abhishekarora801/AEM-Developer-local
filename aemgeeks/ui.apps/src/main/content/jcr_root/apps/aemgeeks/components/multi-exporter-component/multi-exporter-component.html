@@ -1,0 +1,12 @@
+<div data-sly-use.books="com.aem.geeks.core.models.MultiExporter">
+    <div>Title : ${books.multiExporterTitle} </div>
+    <div>Description : ${books.multiExporterDescription} </div>
+    <div>Date : ${'MMM dd,yyyy' @ format=books.multiExporterPublishedDate} </div>
+
+    ==========Multifield with single field==========
+    <div data-sly-list.item="${books.multiExporterAuthorBooks}">
+        --------Book : ${itemList.count}--------
+        <p> Book: <b>${item} </b></p>
+    </div>
+    <p>ALL Book : <b>${books.multiExporterAuthorBooks @ join=', '}</b></p>
+</div>
