@@ -1,0 +1,27 @@
+{
+  "author" : {
+    "jcr:lastModifiedBy": "admin",
+    "professor": "true",
+    "books": ["2 States", "Jab We Met"],
+    "fname": "ABHISHEK",
+    "lname": "Arora",
+    "bookdetailswithmap": {
+      "item0": {
+        "publishyear": "1995",
+        "booksubject": "Understanding Java Language",
+        "bookname": "JAVA"
+      },
+      "item1": {
+        "publishyear": "2000",
+        "booksubject": "Let Us JavaScript",
+        "bookname": "JavaScript"
+      }
+    }
+  },
+  "author-empty-books" : {
+    "jcr:lastModifiedBy": "admin",
+    "professor": "true",
+    "fname": "ABHISHEK",
+    "lname": "Arora"
+  }
+}

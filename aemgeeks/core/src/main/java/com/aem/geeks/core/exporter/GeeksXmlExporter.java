@@ -1,7 +1,5 @@
 package com.aem.geeks.core.exporter;
 
-import com.aem.geeks.core.models.impl.AuthorBooksImpl;
-import jdk.internal.org.jline.utils.Log;
 import org.apache.sling.models.export.spi.ModelExporter;
 import org.apache.sling.models.factory.ExportException;
 import org.osgi.service.component.annotations.Component;

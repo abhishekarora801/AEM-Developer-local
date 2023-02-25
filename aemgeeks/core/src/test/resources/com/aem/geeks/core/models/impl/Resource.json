@@ -1,0 +1,19 @@
+{
+  "resourcePage" : {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Mon Feb 13 2023 19:50:34 GMT+0530",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:createdBy": "admin",
+      "jcr:title": "For Sling Model Exporter",
+      "cq:template": "/conf/aemgeeks/settings/wcm/templates/page-content",
+      "cq:contextHubSegmentsPath": "/etc/segmentation/contexthub",
+      "jcr:created": "Mon Feb 13 2023 19:50:34 GMT+0530",
+      "cq:lastModified": "Sat Feb 25 2023 00:16:38 GMT+0530",
+      "sling:resourceType": "aemgeeks/components/page",
+      "cq:contextHubPath": "/etc/cloudsettings/default/contexthub",
+      "cq:lastModifiedBy": "admin"
+    }
+  }
+}

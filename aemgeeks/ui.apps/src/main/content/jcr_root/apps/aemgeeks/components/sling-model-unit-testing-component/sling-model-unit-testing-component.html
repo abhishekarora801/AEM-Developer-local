@@ -1,0 +1,20 @@
+<h1>Sling Model Unit Testing Component</h1>
+<div data-sly-use.books="${'com.aem.geeks.core.models.SlingModelUnitTestingComponent' @rAttribute='TestAttribute'}"></div>
+
+    <div>First Name: ${books.firstName}</div>
+    <div>Last Name: ${books.lastName}</div>
+    <div>Is Professor: ${books.isProfessor}</div>
+    <div>Page Title: ${books.pageTitle}</div>
+    <div>Request Attribute: ${books.requestAttribute}</div>
+    <div>Home Page Name: ${books.homePageName}</div>
+    <div>Modified By: ${books.lastModifiedBy}</div>
+
+    <div>Books: ${books.authorBooks @ join=', '}</div>
+
+    =============================USING MAP===================================
+    <div data-sly-list.item="${books.bookDetailsWithMap}">
+        ----------Book: ${itemList.count}--------------------
+        <p>Book: <b>${item.bookname}</b></p>
+        <p>Subject: <b>${item.booksubject}</b></p>
+        <p>Publish: <b>${item.publishyear}</b></p>
+    </div>
