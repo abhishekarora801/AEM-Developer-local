@@ -11,7 +11,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith({AemContextExtension.class, MockitoExtension.class})
@@ -57,7 +56,7 @@ class SlingModelUnitTestingComponentImplTest {
     void getAuthorBooks() {
         aemContext.currentResource("/component/author");
         slingModelUnitTestingComponent = aemContext.request().adaptTo(SlingModelUnitTestingComponent.class);
-        System.out.println(slingModelUnitTestingComponent.getAuthorBooks());
+//        System.out.println(slingModelUnitTestingComponent.getAuthorBooks());
         assertEquals(2, slingModelUnitTestingComponent.getAuthorBooks().size());
         assertEquals("2 States", slingModelUnitTestingComponent.getAuthorBooks().get(0));
     }
