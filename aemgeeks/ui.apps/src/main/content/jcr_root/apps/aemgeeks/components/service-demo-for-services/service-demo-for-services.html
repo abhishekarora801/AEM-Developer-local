@@ -1,0 +1,18 @@
+<h1>Service Demo For Services</h1>
+<div data-sly-use.service="com.aem.geeks.core.models.ServiceDemoForServices">
+
+        ====USING SERVICE AND ITERATOR====
+        <div data-sly-list.item="${service.pagesList}">
+            <p> Page ${itemList.count} Title : <b>${item.title}</b></p>
+        </div>
+
+        ====USING SERVICE AND LIST - Using DemoServiceB====
+        <div data-sly-list.item="${service.pageTitleList}">
+            <p> Page ${itemList.count} Title : <b>${item} </b></p>
+        </div>
+
+        ====UNDERSTANDING THE CONCEPT OF @OSGISERVICE --> FILTER AND @REFERENCE --> TARGET====
+        ====AND USING THE SERVICE IN SOME OTHER SERVICE, THEN CALLING THE SECOND SERVICE IN SLING MODEL====
+        ====AND THEN DISPLAYING IT ON SIGHTLY====
+        <p>Name With Reference : <b>${service.nameFromServiceB}</b></p>
+</div>
