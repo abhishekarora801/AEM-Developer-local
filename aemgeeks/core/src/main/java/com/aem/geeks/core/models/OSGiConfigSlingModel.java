@@ -6,4 +6,10 @@ public interface OSGiConfigSlingModel {
     public boolean isLiveData();
     public String[] getCountries();
     public String getRunModes();
+
+    //for the module video - where we are declaring the OSGi config in a separate class.
+
+    public int getServiceId();
+    public String getServiceNameModule();
+    public String getServiceURL();
 }

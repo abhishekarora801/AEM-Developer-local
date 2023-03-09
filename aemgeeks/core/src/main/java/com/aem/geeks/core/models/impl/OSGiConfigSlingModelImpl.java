@@ -1,6 +1,7 @@
 package com.aem.geeks.core.models.impl;
 
 import com.aem.geeks.core.models.OSGiConfigSlingModel;
+import com.aem.geeks.core.services.OSGiConfigModule;
 import com.aem.geeks.core.services.OSGiConfigService;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
@@ -14,6 +15,9 @@ public class OSGiConfigSlingModelImpl implements OSGiConfigSlingModel {
 
     @OSGiService
     OSGiConfigService osGiConfigService;
+
+    @OSGiService
+    OSGiConfigModule osGiConfigModule;
 
     @Override
     public String getServiceName() {
@@ -38,5 +42,20 @@ public class OSGiConfigSlingModelImpl implements OSGiConfigSlingModel {
     @Override
     public String getRunModes() {
         return osGiConfigService.getRunModes();
+    }
+
+    @Override
+    public int getServiceId() {
+        return osGiConfigModule.getServiceID();
+    }
+
+    @Override
+    public String getServiceNameModule() {
+        return osGiConfigModule.getServiceName();
+    }
+
+    @Override
+    public String getServiceURL() {
+        return osGiConfigModule.getServiceURL();
     }
 }
