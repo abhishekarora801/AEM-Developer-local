@@ -1,0 +1,9 @@
+<h1>OSGi Factory Config Implementation</h1>
+<div data-sly-use.osgifactoryconfig="com.aem.geeks.core.models.OSGiFactoryConfigSlingModel"></div>
+
+<div data-sly-list="${osgifactoryconfig.allOSGiConfigs}">
+    ---- Config # <b>${itemList.count}</b>----
+    <div><p> Config ID: <b>${item.configID}</b></p></div>
+    <div><p> Service Name: <b>${item.serviceName}</b></p></div>
+    <div><p> Service URL: <b>${item.serviceURL}</b></p></div>
+</div>
