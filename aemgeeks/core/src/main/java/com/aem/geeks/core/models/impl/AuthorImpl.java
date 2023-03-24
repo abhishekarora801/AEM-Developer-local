@@ -11,6 +11,7 @@ import org.apache.sling.models.annotations.injectorspecific.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -58,6 +59,10 @@ public class AuthorImpl implements Author{
     @Inject
     @Via("resource")
     boolean professor;
+
+    @Inject
+    @Via("resource")
+    String expath;
     @Override
     public String getFirstName() {
         return fname;
