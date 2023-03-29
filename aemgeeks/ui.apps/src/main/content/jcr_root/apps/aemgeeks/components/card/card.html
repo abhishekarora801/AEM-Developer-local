@@ -1,0 +1,12 @@
+<div data-sly-use.config="com.aem.geeks.core.models.CAConfig"></div>
+<!-- Basic Card Example -->
+<div class="card shadow mb-4">
+        <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Country: <b> ${config.siteCountry}</b></h6>
+        </div>
+        <div class="card-body">
+                <p>Site Language: <b> ${config.siteLocale}</b></p>
+                <p>Site Admin: <b> ${config.siteAdmin}</b></p>
+                <p>Site Section: <b> ${config.siteSection}</b></p>
+        </div>
+</div>
