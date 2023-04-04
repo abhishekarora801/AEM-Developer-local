@@ -38,11 +38,17 @@ public class GeeksSearchServlet extends SlingAllMethodsServlet {
     protected void doGet(final SlingHttpServletRequest req, final SlingHttpServletResponse resp) throws ServletException, IOException {
         JSONObject searchResult=null;
         try {
-            String searchtext = req.getRequestParameter("searchText").getString();
+            String searchPath = req.getRequestParameter("searchPath").getString();
+            searchResult = searchService.searchResultSQL2(searchPath);
+
+            //Used for Query builder, uncomment it to see the execution
+            //Once uncommented, use this URL to see results:
+            //http://localhost:4502/geeks/search?searchText=women&pageNumber=1&resultPerPage=5
+            /*String searchtext = req.getRequestParameter("searchText").getString();
             int pageNumber = Integer.parseInt(req.getRequestParameter("pageNumber").getString())-1;
             int resultPerPage = Integer.parseInt(req.getRequestParameter("resultPerPage").getString());
             int startResult=pageNumber*resultPerPage;
-            searchResult=searchService.searchResult(searchtext,startResult,resultPerPage);
+            searchResult=searchService.searchResult(searchtext,startResult,resultPerPage);*/
         } catch (Exception e) {
             LOG.info("\n ERROR {} ", e.getMessage());
         }
